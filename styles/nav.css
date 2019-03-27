@@ -1,0 +1,128 @@
+
+/* HTML Wraps a margin around the body tag */
+body {
+  margin: 0px;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+/* The navigation part of the page */
+.navigation-wrapper {
+  height: 190px;
+  background-color: #11122b; 
+  color: #cbcbcb;
+
+  /* This makes it a flexbox container */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /*  Padding Top-Right-Bottom-Left
+      If two numbers, its top/bottom and left/right
+  */
+  padding: 60px 100px 60px 100px;
+}
+
+/* LEFT COLUMN STYLES */
+.navigation-wrapper > .left-column {
+  display: flex;
+  align-items: center;
+}
+
+.navigation-wrapper > .left-column > .icon {
+  margin-right: 15px;
+}
+
+.navigation-wrapper > .left-column > .icon i { /* i in em */
+  font-size: 2em; /* 1em is a 100% of the normal size*/
+}
+
+.left-column > .contact-hours-wrapper { /* Find child class of contact wrapper */
+  display: grid;
+  grid-template-columns: 1fr; /* 1fr means 1fractional unit. Each row up all the space available */
+  grid-gap: 10px; /* Vertical alignment */
+}
+
+.contact-hours-wrapper > .hours {
+  font-family: 'Ubuntu Condensed', sans-serif;
+  color: #858585;
+  font-size: .8em;
+  letter-spacing: .5px;
+}
+
+
+/* CENTERCOLUMN STYLES */
+.navigation-wrapper > .center-column {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 42px;
+  width: 500px;
+}
+
+/* Flex contained inside of a grid */
+.navigation-wrapper > .center-column > .banner-image {
+  display: flex;
+  justify-content: center;
+}
+
+.navigation-wrapper > .center-column > .banner-image img {
+  width: 216px;
+  height: 100%;
+}
+
+.navigation-wrapper > .center-column > .links-wrapper > .nav-link {
+  width: 70px;
+  text-align: center;
+}
+
+.navigation-wrapper > .center-column > .links-wrapper > .nav-link a {
+  font-family: 'Ubuntu Condensed', sans-serif;
+  color: #cbcbcb;
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+.navigation-wrapper > .center-column > .links-wrapper > .nav-link a:hover{
+  color: #cea135;
+  letter-spacing: 2px;
+}
+
+.links-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* RIGHT COLUMN STYLES */
+.navigation-wrapper > .right-column {
+  display: flex;
+  align-items: center;
+}
+
+.navigation-wrapper .right-column > .address-wrapper { 
+  font-family: 'Ubuntu Condensed', sans-serif;
+  text-align: right;
+}
+
+.navigation-wrapper .right-column > .address-wrapper a { 
+  text-decoration: none;
+  color: #858585;
+  transition: 0.25s;
+}
+
+.navigation-wrapper .right-column > .address-wrapper a:hover { 
+  color: #cea135;
+}
+
+.navigation-wrapper .right-column > .contact-icon a { 
+  text-decoration: none;
+  color: #858585;
+  font-size: 2em;
+  margin-left: 14px;
+  transition: 0.25s;
+}
+
+.navigation-wrapper .right-column > .contact-icon a:hover { 
+  color: #cea135;
+}
+
